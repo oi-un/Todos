@@ -1,38 +1,147 @@
-.App {
+:root {
+  --main-color: #77a9ff;
+  --sub-color: rgb(209, 226, 255);
+}
+
+body {
+  background-color: #aaa;
+}
+.wrap {
+  background-color: #fff;
+  max-width: 700px;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  position: relative;
+}
+/* MODAL */
+.modal-bg {
+  position: fixed;
+  max-width: 700px;
+  width: 100%;
+  height: inherit;
+  background-color: #aaaaaa5b;
+  top: 0;
+  left: 0;
+}
+.modal-container {
+  width: 80%;
+  padding: 3%;
+  margin: 50px auto;
+  background-color: #fff;
+}
+.add-form li {
+  margin-top: 5px;
+}
+.add-form .add-title {
+  display: inline-block;
+  width: 25%;
+}
+.add-form .add-input {
+  width: 75%;
+  font-size: 1rem;
+  padding: 5px 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+.add-form .add-input:focus {
+  outline: 2px solid var(--main-color);
+}
+.modal-btn {
+  text-align: right;
+  margin-top: 20px;
+}
+.modal-btn button {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.modal-btn button:last-child {
+  background-color: rgb(235, 122, 182);
+}
+.modal-btn button:hover {
+  background-color: var(--sub-color);
+}
+.modal-btn button:last-child:hover {
+  background-color: rgb(236, 176, 208);
+}
+/* TITLE */
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.add-todo {
+  float: right;
+  cursor: pointer;
+}
+.add-todo i {
+  color: var(--main-color);
+}
+.title::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* TABLE */
+/* TABLE - THEAD */
+thead th {
+  background-color: #77a9ff;
+  color: #fff;
+  padding: 5px 10px;
+}
+/* TABLE - TBODY */
+tbody td {
+  border-bottom: 1px solid var(--sub-color);
+  padding: 10px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+tbody tr {
+  cursor: pointer;
+}
+tbody tr td:nth-child(2) {
+  text-align: left;
+}
+tbody tr:hover td {
+  background-color: var(--sub-color);
+  font-weight: bold;
+}
+tbody td i {
+  font-size: 1.3rem;
+  color: var(--main-color);
+}
+tbody td button {
+  margin-right: 10px;
+}
+tbody td button:last-child {
+  margin-right: 0;
+}
+tbody {
+  border-bottom: 2px solid var(--main-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+tr.todo-done {
+  position: relative;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+tr.todo-done::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+  position: absolute;
+  top: 50%;
+  left: 0;
 }
-
-.App-link {
-  color: #61dafb;
+tr.todo-done td i {
+  color: #ddd;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+tr.todo-done td {
+  opacity: 0.8;
+  font-style: italic;
+}
+tr.todo-done:hover td {
+  font-weight: normal;
 }
