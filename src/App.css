@@ -31,7 +31,7 @@ body {
   background-color: #fff;
 }
 .add-form li {
-  margin-top: 5px;
+  margin-top: 10px;
 }
 .add-form .add-title {
   display: inline-block;
@@ -67,6 +67,21 @@ body {
 .modal-btn button:last-child:hover {
   background-color: rgb(236, 176, 208);
 }
+.remove-title {
+  text-align: center;
+  color: rgb(231, 68, 95);
+}
+.add-form > li {
+  position: relative;
+}
+.add-form > li > .alert {
+  position: absolute;
+  bottom: -10px;
+  color: red;
+  border-bottom: red solid 2px;
+  font-style: italic;
+}
+
 /* TITLE */
 .title {
   font-size: 1.5rem;
@@ -101,8 +116,14 @@ tbody td {
 tbody tr {
   cursor: pointer;
 }
-tbody tr td:nth-child(2) {
+tbody tr td .todo {
   text-align: left;
+
+  /* 말줄임 */
+  max-width: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 tbody tr:hover td {
   background-color: var(--sub-color);
