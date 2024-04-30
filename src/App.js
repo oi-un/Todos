@@ -5,9 +5,9 @@ import { useState } from 'react';
 function App() {
 
   let [todos, setTodos] = useState([
-    {id: 0, todo: '아침 산책 나가기', date: '2024-04-25', done: false},
-    {id: 1, todo: '2시간 공부하기', date: '2024-04-25', done: false},
-    {id: 2, todo: '마트로 장보러 가기', date: '2024-04-25', done: false}
+    {id: 0, todo: '할 일 1번', date: '2024-04-25', done: false},
+    {id: 1, todo: '할 일 2번', date: '2024-04-25', done: false},
+    {id: 2, todo: '할 일 3번', date: '2024-04-25', done: false}
   ]);
 
   let changeDone = (item)=>{
@@ -43,12 +43,19 @@ function App() {
         </span>
       </h3>
       <table>
+        <colgroup>
+          <col/>
+          <col/>
+          <col/>
+          <col/>
+          <col/>
+        </colgroup>
       <thead>
         <tr>
           <th>NO</th>
-          <th>CONTENT</th>
-          <th>DATE</th>
           <th>STATUS</th>
+          <th>DATE</th>
+          <th>CONTENT</th>
           <th>MODIFY</th>
         </tr>
       </thead>
@@ -66,10 +73,6 @@ function App() {
                 item.done == true? 'todo-done' : ''
               }>
                 <td>{i+1}</td>
-                <td><div className='todo'>
-                  {item.todo}
-                  </div></td>
-                <td>{item.date}</td>
                 <td onClick={()=>{changeDone(item);}}>
                   {
                     item.done ? 
@@ -77,13 +80,23 @@ function App() {
                     <i className="fa-regular fa-square-check"></i>
                   }
                 </td>
+                <td>{item.date}</td> 
+                <td><div className='todo'>
+                  {item.todo}
+                  </div></td>
                 <td>
-                  <button onClick={()=>{setModi([true, item])}}>
-                    <i className="fa-regular fa-pen-to-square"></i>
-                  </button>
-                  <button onClick={()=>{setRemove([true, item])}}>
-                    <i className="fa-solid fa-trash-can"></i>
-                  </button>
+                  <div className="drop-down">
+                    <button className="drop-button"><i className="fa-solid fa-circle-plus"></i></button>
+                    <div className='drop-menu'>
+                      <button onClick={()=>{setModi([true, item])}}>
+                        <i className="fa-regular fa-pen-to-square"></i>
+                      </button>
+                      <button onClick={()=>{setRemove([true, item])}}>
+                        <i className="fa-solid fa-trash-can"></i>
+                      </button>
+                    
+                    </div>
+                  </div>
                 </td>
               </tr>
             )

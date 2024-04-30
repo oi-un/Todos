@@ -10,6 +10,7 @@ body {
   background-color: #fff;
   max-width: 700px;
   width: 100%;
+  margin: auto;
   height: 100vh;
   padding: 20px;
   position: relative;
@@ -17,14 +18,15 @@ body {
 /* MODAL */
 .modal-bg {
   position: fixed;
-  max-width: 700px;
   width: 100%;
   height: inherit;
   background-color: #aaaaaa5b;
   top: 0;
   left: 0;
+  z-index: 10;
 }
 .modal-container {
+  max-width: calc(700px * 0.8);
   width: 80%;
   padding: 3%;
   margin: 50px auto;
@@ -94,6 +96,9 @@ body {
 .add-todo i {
   color: var(--main-color);
 }
+.add-todo i:hover {
+  color: var(--sub-color);
+}
 .title::after {
   content: "";
   display: block;
@@ -101,6 +106,21 @@ body {
 }
 
 /* TABLE */
+col:nth-child(1) {
+  width: 5%;
+}
+col:nth-child(2) {
+  width: 5%;
+}
+col:nth-child(3) {
+  width: 20%;
+}
+col:nth-child(4) {
+  width: 60%;
+}
+col:nth-child(5) {
+  width: 10%;
+}
 /* TABLE - THEAD */
 thead th {
   background-color: #77a9ff;
@@ -165,4 +185,48 @@ tr.todo-done td {
 }
 tr.todo-done:hover td {
   font-weight: normal;
+}
+
+/* drop down */
+.drop-down {
+  position: relative;
+}
+.drop-button {
+  color: var(--main-color);
+}
+.drop-down .drop-menu {
+  z-index: 5;
+  position: absolute;
+  top: -10px;
+  right: 0px;
+  text-align: center;
+
+  width: 0px;
+  height: 40px;
+  background-color: var(--sub-color);
+  display: flex;
+  justify-content: center;
+
+  overflow: hidden;
+}
+.drop-down .drop-menu button {
+  margin-right: 10px;
+}
+.drop-down .drop-menu button:last-child {
+  margin-right: 0;
+}
+.drop-down .drop-menu button:hover i {
+  color: pink;
+}
+.drop-down:hover .drop-menu {
+  width: 100px;
+  transition: all 0.3s;
+}
+
+/* media query */
+@media screen and (max-width: 600px) {
+  table tr th:first-child,
+  table tr td:first-child {
+    display: none;
+  }
 }
