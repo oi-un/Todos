@@ -10,13 +10,13 @@
 <table>
   <tr>
     <td>
-      <img width="50%" alt="main-01" src="https://github.com/oi-un/Todos/assets/138845281/99297671-2074-477d-bf8d-a28324375b77">
+      <img width="524" alt="main-01" src="https://github.com/oi-un/Todos/assets/138845281/99297671-2074-477d-bf8d-a28324375b77">
     </td>
     <td>
-      <img width="50%" alt="main-02" src="https://github.com/oi-un/Todos/assets/138845281/96ca7511-92df-4f50-af1f-1f309221c30f">
+      <img width="524" alt="main-02" src="https://github.com/oi-un/Todos/assets/138845281/96ca7511-92df-4f50-af1f-1f309221c30f">
     </td>
     <td>
-      <img width="50%" alt="main-02" src="https://github.com/oi-un/Todos/assets/138845281/d1982657-a45d-4715-a5a3-0ac5781b0c96">
+      <img width="524" alt="main-02" src="https://github.com/oi-un/Todos/assets/138845281/d1982657-a45d-4715-a5a3-0ac5781b0c96">
     </td>
   </tr>
 </table>
