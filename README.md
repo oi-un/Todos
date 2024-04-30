@@ -19,21 +19,33 @@
 </p>
 
 <h3>ADD TODO : 일정 추가</h3>
-<div>
-  <img width="524" alt="add-01" src="https://github.com/oi-un/Todos/assets/138845281/3fcbeea8-d871-412b-852b-a2aed9c61bc9">
-  <img width="524" alt="add-02" src="https://github.com/oi-un/Todos/assets/138845281/f54e9219-1273-4522-bbee-229b0d1450ab">
-  <img width="525" alt="add-03" src="https://github.com/oi-un/Todos/assets/138845281/bdaebab5-b456-48d9-b39a-ebcb3f46df8e">
-</div>
+<table>
+  <tr>
+    <td>
+      <img width="524" alt="add-01" src="https://github.com/oi-un/Todos/assets/138845281/3fcbeea8-d871-412b-852b-a2aed9c61bc9">
+    </td>
+    <td>
+      <img width="524" alt="add-02" src="https://github.com/oi-un/Todos/assets/138845281/f54e9219-1273-4522-bbee-229b0d1450ab">
+    </td>
+    <td>
+      <img width="525" alt="add-03" src="https://github.com/oi-un/Todos/assets/138845281/bdaebab5-b456-48d9-b39a-ebcb3f46df8e">
+    </td>
+  </tr>
+</table>  
 <p>
   일정추가는 날짜와 일정명을 입력할 수 있습니다.<br>
   날짜 또는 제목이 비어있는 경우 Insert 문구가 나타납니다.
 </p>
 
 <h3>MODIFY TODO : 일정 수정</h3>
-<div>
   <img width="524" alt="image" src="https://github.com/oi-un/Todos/assets/138845281/5bd46726-3e8e-4a44-a3cc-f9a5e3d2d1c0">
+  <h4>Completion</h4>
+  <p>일정의 완료여부는 메인페이지의 체크 버튼을 통해 변경할 수 있습니다.</p>
+  
   <img width="526" alt="image" src="https://github.com/oi-un/Todos/assets/138845281/759988a8-2763-455f-a5a4-42780437ec9d">
-</div>
+  <h4>Modify</h4>
+  <p>날짜와 일정명은 메인페이지의 수정버튼을 통해 가능하며 모달창으로 구현했습니다.</p>
 
 <h3>일정 삭제</h3>
 <img width="523" alt="image" src="https://github.com/oi-un/Todos/assets/138845281/4495e9c3-ea9e-467e-adc2-2961f49ec98f">
+<p>일정 삭제 페이지도 모달창으로 구현했으며, Yes 버튼을 클릭하면 해당 일정이 사라지고 No 버튼을 클릭하면 해당 모달창이 닫힙니다.</p>
